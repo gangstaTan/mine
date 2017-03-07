@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="ie=edge">
+		<title>订单详细</title>
+		<script type="text/javascript" src="mobile.js" ></script>
+		<style>
+			*{
+				margin: 0;
+				padding: 0;
+			}
+			li{
+				list-style: none;
+			}
+			img{
+				display: block;
+			}
+			header {
+	            width: 100%;
+	            height: 1.86rem;
+	            text-align: center;
+	            box-sizing: border-box;
+	            border-bottom: 2px solid #07ca61;
+	            position: relative;
+	            color: #333;
+	            font: 0.76rem/1.82rem '微软雅黑';
+        	}
+        	.back-button {
+                position: absolute;
+                width: 1.24rem;
+                height: 1.82rem;
+                left: 0;
+                top: 0;
+                border: 0;
+                outline: none;
+                background: url('images/icon-back.png') no-repeat center center #fff;
+				background-size:0.55rem 0.8rem;
+            }
+            
+            .photo{
+            	height: 3.02rem;
+            	width: 14.2rem;
+            	margin: 0 auto;
+            }
+            .photo dl{overflow: hidden;}
+            .photo dt{
+            	float: left;
+            	padding: 0.4rem 0.4rem 0.4rem 0;
+            }
+            .photo dt img{
+            	width: 2rem;
+            	height: 2rem;
+            	
+            }
+            .photo dd{
+            	float: left;
+            	background: url(images/star.png) no-repeat 0 2.22rem;
+            	background-size:2.32rem 0.4rem;
+            	height: 3.02rem;
+            	width:11.78rem;
+            	position: relative;
+            }
+            
+            .photo dd h3{
+            	color: #333;
+            	height: 1.36rem;
+            	font:0.64rem/1.36rem "微软雅黑";
+            	background: url(images/dot.png) no-repeat 2.04rem center;
+            	background-size:0.16rem 0.16rem;
+            }
+            .photo dd h4{
+            	font: 0.48rem/0.48rem '微软雅黑';
+            	color: #969696;
+            }
+            .photo dd a{
+            	display: inline-block;
+            	width: 1.7rem;
+            	height: 1.7rem;
+            	background: url(images/tel.png) no-repeat center;
+            	background-size:1.7rem 1.7rem;
+            	position: absolute;
+            	right: 0;
+            	top: 0.52rem;
+            }
+			.block{
+				background: #EBEBEB;
+				height: 0.4rem ;
+				
+			}
+            main{
+            	background: white;
+            	font-size: 0.64rem;
+            	font-family: "微软雅黑";
+            }
+            main ul {
+            	width: 14.2rem;
+            	margin: 0 auto;
+            }
+            main ul li{
+            	border-bottom: 1px solid #dadada;
+            	overflow: hidden;
+            }
+            main span{
+            	float: left;
+            	color: #969696;
+            	
+            }
+            main em{
+            	float: right;
+            	font-style: normal;
+            	
+            }
+            main ul li:nth-child(1){
+            	height: 1.36rem;
+            	line-height: 1.36rem;
+            }
+            main ul li:nth-child(1) span{
+            	font-size: 0.48rem;
+            }
+            main ul li:nth-child(1) em{
+            	font-size: 0.52rem;
+            	color: #07ca61;
+            }
+            main ul li:nth-child(2),main ul li:nth-child(6),main ul li:nth-child(7){
+            	height: 1.76rem;
+            	line-height: 1.76rem;
+            }
+            main ul li:nth-child(3),main ul li:nth-child(4){
+            	height: 2.58rem;
+            	line-height: 1.8rem;
+            	position: relative;
+            }
+            main ul li:nth-child(3) p,main ul li:nth-child(4) p{
+            	position: absolute;
+            	right: 0;
+            	top: 1.48rem;
+            	line-height: 0.64rem;
+            	color: #969696;
+            }
+            main ul li:nth-child(5){
+            	height: 1.72rem;
+            	line-height: 1.72rem;
+            }
+            main div{
+            	overflow: hidden;
+            	height: 1.18rem;
+            	line-height: 1.18rem;
+            	width: 14.2rem;
+            	margin: 0 auto;
+            }
+            .one{
+            	margin-top: 0.3rem;
+            }
+            .four{
+            	position: relative;
+            }
+            .four i{
+            	font-style: normal;
+            	color: #f32f00;
+            }
+            .four em{
+            	margin-right: 0.64rem;
+            }
+            .four button{
+            	position: absolute;
+                width: 0.64rem;
+                height: 1.18rem;
+                right: 0;
+                top: 0;
+                border: 0;
+                outline: none;
+                background: url(images/jt.png) no-repeat center center #fff;
+            	background-size: 0.28rem 0.48rem;
+            }
+            .five{
+            	height: 1.54rem;
+            	line-height: 1.54rem;
+            	margin-bottom: 0.56rem;
+            }
+            .five span{
+            	color: #333;
+            	
+            }
+            .five em{
+            	font-size: 0.84rem;
+            	color: #f32f00;
+            }
+            footer{
+            	margin: 0 auto;
+            	width: 14.2rem;
+            }
+            footer button{
+            	width: 100%;
+            	border: 0;
+            	height: 1.92rem;
+            	font:0.64rem/1.92rem '微软雅黑';
+            	background: #07CA61;
+            	color: white;
+            	cursor: pointer;
+            	text-align: center;
+            }
+		</style>
+	</head>
+	<body>
+		<header>
+			<button class="back-button"></button>
+			订单详细
+		</header>
+		<div class="photo">
+			<dl>
+				<dt><img src="images/baby.png"/></dt>
+				<dd>
+					<h3>张师傅  &nbsp;粤B2360W</h3>
+					<h4>面包车</h4>
+					<a href="#"></a>
+				</dd>
+			</dl>
+		</div>
+		<p class="block"></p>
+		<main>
+			<ul>
+				<li>
+					<span>2016-10-24 18:00</span>
+					<em>司机已分配</em>
+				</li>
+				<li>
+					<span>车型</span>
+					<em>面包车</em>
+				</li>
+				<li>
+					<span>发货地</span>
+					<em>中洲控股中心A座西门</em>
+					<p>15913139061</p>
+				</li>
+				<li>
+					<span>收货地</span>
+					<em>深圳北站西广场B2出口</em>
+					<p>15913139061</p>
+				</li>
+				<li>
+					<span>出发时间</span>
+					<em>2016-10-25 18:00</em>
+				</li>
+				<li>
+					<span>附加服务</span>
+					<em>搬运，返程</em>
+				</li>
+				<li>
+					<span>备注</span>
+					<em>请直接到收货点来收货，谢谢！</em>
+				</li>
+			</ul>
+			<div class="one"><span>起步价</span><em>33元</em></div>
+			<div><span>里程费（3.2公里）</span><em>64元</em></div>
+			<div><span>返程费用（5公里免费)</span><em>0元</em></div>
+			<div class="four"><span>优惠券已抵扣 <i>¥10</i></span><em>切换优惠券</em><button></button></div>
+			<div class="five"><span>合计</span><em>¥58</em></div>
+		</main>
+		<footer><button>取消订单</button></footer>
+	</body>
+</html>

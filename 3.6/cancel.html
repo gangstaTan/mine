@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="ie=edge">
+		<title>取消订单</title>
+		<script type="text/javascript" src="mobile.js" ></script>
+		<style>
+			*{
+				margin: 0;
+				padding: 0;
+			}
+			li{
+				list-style: none;
+			}
+			img{
+				display: block;
+			}
+			header {
+	            width: 100%;
+	            height: 1.86rem;
+	            text-align: center;
+	            box-sizing: border-box;
+	            border-bottom: 2px solid #07ca61;
+	            position: relative;
+	            color: #333;
+	            font: 0.76rem/1.82rem '微软雅黑';
+        	}
+        	.back-button {
+                position: absolute;
+                width: 1.24rem;
+                height: 1.82rem;
+                left: 0;
+                top: 0;
+                border: 0;
+                outline: none;
+                background: url('images/icon-back.png') no-repeat center center #fff;
+				background-size:0.55rem 0.8rem;
+            }
+            .hint{
+            	height: 1.68rem;
+            	background: #f88266;
+            	padding-top: 0.3rem;
+            	
+            }
+            .hint p,.hint h5{
+            	font:0.48rem/0.72rem "微软雅黑";
+            	text-align: center;
+				color: #fff;	
+            }
+            .main{
+            	height: 2.82rem;
+            	padding-top: 0.82rem;
+            	border-bottom: 1px solid #dadada;
+            }
+            .main h3{
+            	font:0.76rem/1.1rem "微软雅黑";
+            	text-align: center;
+            }
+            .main h4{
+            	font:0.56rem/0.88rem "微软雅黑";
+            	color: #07CA61;
+            	text-align: center;
+            }
+            main{
+            	width: 14.2rem;
+            	margin: 0 auto;
+            }
+            main li{
+            	border-bottom: 1px solid #dadada; 
+            	overflow: hidden;
+            	height: 1.96rem;
+            	font: 0.64rem/1.96rem '微软雅黑';
+            }
+            main li label{
+            	display: inline-block;
+            	height: 1.96rem;
+            	width: 14.2rem;
+            }
+            main span{
+            	display: inline-block;
+            	float: right;
+            	width: 0.8rem;
+            	height: 0.8rem;
+            	border: 1px solid #ddd;
+            	border-radius: 50%;
+            	margin-top: 0.56rem;
+            }
+            input:checked + span {
+            	background: url(images/check.png) no-repeat center;
+            	background-size: 0.8rem 0.8rem;
+            	border-color:transparent;
+            }
+            footer{
+            	margin-top: 1.6rem;
+            	height: 1.92rem;
+            	background: #07CA61;
+            	color: white;
+            	font: 0.64rem/1.92rem '微软雅黑';
+            	text-align: center;
+            	border-radius:3px ;
+            	cursor: pointer;
+            }
+		</style>
+	</head>
+	<body>
+		<header>
+			<button class="back-button"></button>
+			取消订单
+		</header>
+		<div class="hint">
+			<p>若单日取消订单达到3次，账户将会被冻结1天，请谨慎取消!</p>
+			<h5>您当日已取消 2 次</h5>
+		</div>
+		<div class="main">
+			<h3>请您真实告诉我们取消原因</h3>
+			<h4>我们会努力为您提供更好的服务</h4>
+		</div>
+		<main>
+			<ul>
+				<li><label><input type="checkbox" hidden/>司机离我太远<span></span></label></li>
+				<li><label><input type="checkbox" hidden/>下错单或重复下单<span></span></label></li>
+				<li><label><input type="checkbox" hidden/>暂时不需要车<span></span></label></li>
+				<li><label><input type="checkbox" hidden/>司机让我取消订单<span></span></label></li>
+			</ul>
+		</main>
+		<footer>提交</footer>
+	</body>
+</html>
